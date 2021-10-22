@@ -20,7 +20,7 @@ func main(){
 
 	value := <-intChan
 
-	log.Println("receive", value)
+	log.Println("测试：received from channel", value)
 
 
 
