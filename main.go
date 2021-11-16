@@ -1,18 +1,20 @@
 package main
 
 import (
-	helper111 "github.com/xeviar/myniceprograme/helper"
 	"log"
+
+	helper111 "github.com/xeviar/myniceprograme/helper"
 )
 
 const numPool = 10
+
 func CalculateValue(intChan chan int) {
 	randomNumber := helper111.RandomNumber(numPool)
 
 	intChan <- randomNumber
 }
 
-func main(){
+func main() {
 	intChan := make(chan int)
 	defer close(intChan)
 
@@ -21,7 +23,6 @@ func main(){
 	value := <-intChan
 
 	log.Println("测试：received from channel", value)
-
-
+	log.Println("测试Feature：received from channel", value)
 
 }
