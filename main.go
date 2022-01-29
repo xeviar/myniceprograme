@@ -22,6 +22,6 @@ func main() {
 
 	value := <-intChan
 
-	log.Println("测试：received from channel", value)
+	log.Println("测试OK：received from channel", value)
 
 }
