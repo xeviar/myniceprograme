@@ -23,6 +23,5 @@ func main() {
 	value := <-intChan
 
 	log.Println("测试：received from channel", value)
-	log.Println("测试Feature：received from channel", value)
 
 }
